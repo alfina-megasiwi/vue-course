@@ -12,7 +12,7 @@ const app = Vue.createApp({
       if (value > 50) {
         const that = this;
         setTimeout(function () {
-          that.counter= 0;
+          that.counter = 0;
         }, 2000);
       }
     },
@@ -42,6 +42,9 @@ const app = Vue.createApp({
   },
   methods: {
     outputFullName() {
+      // if we used this function for updating the name,
+      // all function in "methods" will be re-executed
+      // even if we only clicked the counter button
       if (this.name === "") {
         return "";
       }
